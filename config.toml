@@ -1,6 +1,6 @@
-baseurl = "https://blist.vercel.app"
+baseurl = "https://emptymalei.github.io/frameworks"
 metaDataFormat = "yaml"
-title = "Hugo Listing Template"
+title = "Frameworks"
 theme = "blist"
 
 DefaultContentLanguage = "en"
@@ -11,13 +11,13 @@ DefaultContentLanguage = "en"
     weight = 1
     languageName = "English"
     [languages.en.params]
-      introTitle = "A Hugo Template for Creating Listing Websites"
-      introSubtitle = "Creating listing websites with hugo, and automate the data collecting processes."
+      introTitle = "Frameworks for data"
+      introSubtitle = "Collection of frameworks for data analytics, data storage, modelling, and tracking."
       introPhoto = "/home/undraw_note_list_re_r4u9.svg"
       logo = "/logo/logo.png"
     [[languages.en.menu.main]]
-        name = "Blog"
-        url = "blog"
+        name = "Frameworks"
+        url = "frameworks"
         weight = 1
 
     [[languages.en.menu.main]]
@@ -92,7 +92,7 @@ DefaultContentLanguage = "en"
   ascentColor = "bg-blue-100"
 
   # The page bundle that is shown on the front page
-  frontBundle = "blog"
+  frontBundle = "frameworks"
 
   # Used to hide the post metadata such as posted date, reading time and word count
   # Can be used at site level or page level
