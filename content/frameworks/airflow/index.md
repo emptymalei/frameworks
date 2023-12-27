@@ -1,14 +1,19 @@
 ---
 date: "2023-11-05T11:30:43+01:00"
 title: "Airflow"
-summary: ""
-images: # Create a folder in /static/images/colors that has the same name as this current markdown file and place the images there. We only need the file name here. If this is not clear, please refer to existing colors as references.
-  # - path:
+summary: "Apache Airflow - A platform to programmatically author, schedule, and monitor workflows"
+images: # Create a folder called assets alongside this index.md file and place the images there. We only need the file name there. 
+  - path: assets/code.png
+  - path: assets/dags.png
+  - path: assets/duration.png
+  - path: assets/gantt.png
+  - path: assets/graph.png
+  - path: assets/grid.png 
 tags:
-  - ""
+  - "workflow"
 links:
-  - name: ""
-    link: ""
+  - name: "apache/airflow"
+    link: "https://github.com/apache/airflow"
 author:    # the person who submitted this tool to KausalFlow
 draft: false
 ---
