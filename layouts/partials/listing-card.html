@@ -1,41 +1,57 @@
-<div class="p-2">
-<a href="{{ .Permalink }}">
-  {{- $dir := .Page.Permalink -}}
-  {{ if isset .Params "images" }}
-    <div class="relative">
+<div class="p-2 border border-sky-500">
+  <a href="{{ .Permalink }}">
+    {{- $dir := .Page.Permalink -}}
+    {{ if isset .Params "images" }}
+    <div class="relative mb-5">
       {{ with (index (.Params.images) 0) }}
-        <img src="{{ $dir }}{{ .path }}"  alt="{{ .Params.title }}" class="rounded-lg shadow-sm w-full h-52 object-cover" />
+      <img src="{{ $dir }}{{ .path }}" alt="{{ .Params.title }}"
+        class="rounded-lg shadow-sm w-full h-52 object-cover" />
       {{ end }}
       {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}
-      <div class="absolute top-4 right-4 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white text-sm px-2 py-0.5">
-        {{ partial "date.html" (dict "date" .Date "language" $.Page.Language "format" "short") }}
+      <div
+        class="absolute top-4 right-4 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white text-sm px-2 py-0.5">
+        {{ range $cat := .Params.categories }}
+        <a href="{{ " /categories/" | relLangURL }}{{ $cat | urlize }}"
+          class="hover:bg-blue-200 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 inline-flex items-center justify-center">
+          {{$cat}}
+        </a>
+        {{ end }}
       </div>
       {{ end }}
     </div>
-  {{ else }}
-    <div class="relative">
+    {{ else }}
+    <div class="relative mb-5">
       {{ with (index (.Resources.ByType "image") 0) }}
-       <img src="{{ .Permalink }}" />
+      <img src="{{ .Permalink }}" />
       {{ end }}
       {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}
-      <div class="absolute top-4 right-4 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white text-sm px-2 py-0.5">
-        {{ partial "date.html" (dict "date" .Date "language" $.Page.Language "format" "short") }}
+      <div
+        class="absolute top-4 right-4 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white text-sm px-2 py-0.5">
+        {{ range $cat := .Params.categories }}
+        <a href="{{ " /categories/" | relLangURL }}{{ $cat | urlize }}"
+          class="hover:bg-blue-200 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 inline-flex items-center justify-center">
+          {{$cat}}
+        </a>
+        {{ end }}
       </div>
       {{ end }}
     </div>
-  {{ end }}
-  <div class="my-2 text-xl font-semibold">{{ .Params.title }}</div>
-  <div>{{ .Params.summary }}</div>
-</a>
-{{ if not (or (or .Site.Params.hideOtherLanguages .Params.hideOtherLanguages) false) }}
+    {{ end }}
+    <a href="{{ .Permalink }}">
+      <div class="my-2 text-xl font-semibold mb-5">{{ .Params.title }}</div>
+    </a>
+    <div class="mb-5">{{ .Params.summary }}</div>
+  </a>
+  {{ if not (or (or .Site.Params.hideOtherLanguages .Params.hideOtherLanguages) false) }}
   {{ if .IsTranslated -}}
-    <div style="font-style: italic;font-size: smaller;">
-      {{- $sortedTranslations := sort .Translations "Site.Language.Weight" -}}
-      {{- $links := apply $sortedTranslations "partial" "translation_link.html" "." -}}
-      {{- $cleanLinks := apply $links "chomp" "." -}}
-      {{- $linksOutput := delimit $cleanLinks (i18n "translationsSeparator") -}}
-      {{ i18n "translationsLabel" }}{{ $linksOutput }}
-    </div>
+  <div style="font-style: italic;font-size: smaller;">
+    {{- $sortedTranslations := sort .Translations "Site.Language.Weight" -}}
+    {{- $links := apply $sortedTranslations "partial" "translation_link.html" "." -}}
+    {{- $cleanLinks := apply $links "chomp" "." -}}
+    {{- $linksOutput := delimit $cleanLinks (i18n "translationsSeparator") -}}
+    {{ i18n "translationsLabel" }}{{ $linksOutput }}
+  </div>
   {{- end }}
-{{ end }}
+  {{ end }}
+
 </div>
