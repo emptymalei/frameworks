@@ -9,6 +9,8 @@ images: # Create a folder called assets alongside this index.md file and place t
   - path: assets/gantt.png
   - path: assets/graph.png
   - path: assets/grid.png 
+categories:
+  - workflow
 tags:
   - "workflow"
 links:

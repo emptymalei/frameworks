@@ -1,4 +1,4 @@
-baseurl = "https://emptymalei.github.io/frameworks"
+baseurl = ""
 metaDataFormat = "yaml"
 title = "Frameworks"
 theme = "blist"
@@ -30,36 +30,31 @@ DefaultContentLanguage = "en"
         url = "tags"
         weight = 3
 
-    [[languages.en.menu.main]]
-        name = "Top Post"
-        url = "/en/blog/emoji-support/"
-        weight = 4
+  # [languages.de]
+  #   # contentDir = "content/de" # Deutsch
+  #   weight = 2
+  #   languageName = "Deutsch"
+  #   title = "Blist (mehrsprachig)"
+  #   description = "Modernes Blog-Theme für Ihre Hugo-Site."
+  #   [languages.de.params]
+  #     introTitle = "Eine Hugo-Vorlage für die Erstellung von Listing-Websites"
+  #     introSubtitle = "Erstellen von Inserat-Websites mit hugo und Automatisieren der Datenerfassung."
+  #     introPhoto = "/home/undraw_note_list_re_r4u9.svg"
+  #     logo = "/logo/logo.png"
+  #   [[languages.de.menu.main]]
+  #       name = "Blog"
+  #       url = "blog"
+  #       weight = 1
 
-  [languages.de]
-    # contentDir = "content/de" # Deutsch
-    weight = 2
-    languageName = "Deutsch"
-    title = "Blist (mehrsprachig)"
-    description = "Modernes Blog-Theme für Ihre Hugo-Site."
-    [languages.de.params]
-      introTitle = "Eine Hugo-Vorlage für die Erstellung von Listing-Websites"
-      introSubtitle = "Erstellen von Inserat-Websites mit hugo und Automatisieren der Datenerfassung."
-      introPhoto = "/home/undraw_note_list_re_r4u9.svg"
-      logo = "/logo/logo.png"
-    [[languages.de.menu.main]]
-        name = "Blog"
-        url = "blog"
-        weight = 1
+  #   [[languages.de.menu.main]]
+  #       name = "Über mich"
+  #       url = "page/about/"
+  #       weight = 2
 
-    [[languages.de.menu.main]]
-        name = "Über mich"
-        url = "page/about/"
-        weight = 2
-
-    [[languages.de.menu.main]]
-        name = "Tags"
-        url = "tags"
-        weight = 3
+  #   [[languages.de.menu.main]]
+  #       name = "Tags"
+  #       url = "tags"
+  #       weight = 3
 
 [params]
   # Enable the darkmode toggle in header
@@ -83,7 +78,7 @@ DefaultContentLanguage = "en"
   ]
 
   # Custom copyright - optional
-  copyright = "Copyright © 2021 - Katheryn Fox · All rights reserved"
+  copyright = "Copyright © 2024 - KausalFlow"
   favicon = "/favicon.svg"
 
   # Color for the intro details and social links block, not applicable for dark mode
