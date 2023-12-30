@@ -11,7 +11,7 @@
       <div
         class="absolute top-4 right-4 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white text-sm px-2 py-0.5">
         {{ range $cat := .Params.categories }}
-        <a href="{{ " /categories/" | relLangURL }}{{ $cat | urlize }}"
+        <a href="{{ "/categories/" | relLangURL }}{{ $cat | urlize }}"
           class="hover:bg-blue-200 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 inline-flex items-center justify-center">
           {{$cat}}
         </a>
@@ -28,7 +28,7 @@
       <div
         class="absolute top-4 right-4 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white text-sm px-2 py-0.5">
         {{ range $cat := .Params.categories }}
-        <a href="{{ " /categories/" | relLangURL }}{{ $cat | urlize }}"
+        <a href="{{ "/categories/" | relLangURL }}{{ $cat | urlize }}"
           class="hover:bg-blue-200 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 inline-flex items-center justify-center">
           {{$cat}}
         </a>
@@ -38,9 +38,9 @@
     </div>
     {{ end }}
     <a href="{{ .Permalink }}">
-      <div class="my-2 text-xl font-semibold mb-5">{{ .Params.title }}</div>
+      <div class="my-2 text-xl font-semibold mb-2 p-3">{{ .Params.title }}</div>
     </a>
-    <div class="mb-5">{{ .Params.summary }}</div>
+    <div class="mb-2 p-3">{{ .Params.summary }}</div>
   </a>
   {{ if not (or (or .Site.Params.hideOtherLanguages .Params.hideOtherLanguages) false) }}
   {{ if .IsTranslated -}}
