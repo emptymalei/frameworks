@@ -21,14 +21,20 @@ DefaultContentLanguage = "en"
         weight = 1
 
     [[languages.en.menu.main]]
-        name = "About"
-        url = "page/about/"
+        name = "Categories"
+        url = "categories"
         weight = 2
 
     [[languages.en.menu.main]]
         name = "Tags"
         url = "tags"
         weight = 3
+
+    [[languages.en.menu.main]]
+        name = "About"
+        url = "/about/"
+        weight = 4
+
 
   # [languages.de]
   #   # contentDir = "content/de" # Deutsch
@@ -209,8 +215,7 @@ DefaultContentLanguage = "en"
 
 
 [taxonomies]
-    author = "author"
+    author = "authors"
     category = "categories"
     tag = "tags"
-    hex = "hex"
 
