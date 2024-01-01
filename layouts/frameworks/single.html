@@ -13,7 +13,47 @@
   </div>
   {{ end }}
 
-  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+  {{- partial "list/list-sidebar.html" . -}}
+
+  <div class="p-4 sm:ml-64">
+    {{- partial "list/list-breadcrumb.html" . -}}
+    <div class="p-4 border-2 border-gray-200 border-solid rounded-lg dark:border-gray-700">
+        <article class="container p-6 mx-auto prose">
+
+            <h1 class="text-2xl font-bold mb-2">{{ .Title }}</h1>
+        
+            {{- partial "info/description-list.html" . -}}
+            {{- partial "info/item-images.html" . -}}
+        
+        
+            {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}
+            <h5 class="text-sm mt-20 content-end flex flex-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <rect x="4" y="5" width="16" height="16" rx="2" />
+                <line x1="16" y1="3" x2="16" y2="7" />
+                <line x1="8" y1="3" x2="8" y2="7" />
+                <line x1="4" y1="11" x2="20" y2="11" />
+                <rect x="8" y="15" width="2" height="2" />
+              </svg>
+              {{ $datestr | i18n "postedOnDate" }}
+              {{ if ne $datestr $lastmodstr }}
+                &nbsp{{ $lastmodstr | i18n "lastModified" }}</h5><h5 class="text-sm flex items-right content-end flex-wrap">
+              {{ else }}
+                &nbsp;
+              {{ end }}
+            </h5>
+            {{ end }}
+        
+            {{ if (or .Site.Params.toc .Params.toc) }}
+            {{- partial "toc.html" . -}}
+            {{ end }}
+        
+            {{ .Content }}
+          </article>
+    </div>
+
+  {{/*  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
 
     <h1 class="text-2xl font-bold mb-2">{{ .Title }}</h1>
 
@@ -49,5 +89,5 @@
 
   {{- partial "comments.html" . -}}
 
-  {{- partial "social.html" . -}}
+  {{- partial "social.html" . -}}  */}}
 {{ end }}
