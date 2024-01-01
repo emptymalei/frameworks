@@ -15,6 +15,7 @@ DefaultContentLanguage = "en"
       introSubtitle = "Collection of frameworks for data analytics, data storage, modelling, and tracking."
       introPhoto = "/home/undraw_note_list_re_r4u9.svg"
       logo = "/logo/logo.png"
+    
     [[languages.en.menu.main]]
         name = "Frameworks"
         url = "frameworks"
@@ -112,6 +113,10 @@ DefaultContentLanguage = "en"
   # This setting can also be in page's markdown file
   hidePageThumbnail = false
 
+[params.introButton]
+  link = "/frameworks"
+  text = "All Frameworks"
+
 # Comments system
 [params.comments]
   # Supports disqus, giscus and utterances
@@ -138,62 +143,21 @@ DefaultContentLanguage = "en"
 [params.homepage.social]
   # Global params common for both languages
   title = "Follow me"
-  description = "I work on everything coding and tweet developer memes"
+  description = "I deal with data."
 
   [[params.homepage.social.icons]]
     website = "twitter"
-    url = "https://twitter.com/"
+    url = "https://twitter.com/leima137"
   [[params.homepage.social.icons]]
     website = "linkedin"
-    url = "https://linkedin.com/in/"
-  [[params.homepage.social.icons]]
-    website = "xing"
-    url = "https://www.xing.com/profile/"
+    url = "https://linkedin.com/in/leima137"
   [[params.homepage.social.icons]]
     website = "telegram"
-    url = "https://t.me/"
+    url = "https://t.me/amneumarkt"
   [[params.homepage.social.icons]]
     website = "github"
-    url = "https://github.com/"
-  [[params.homepage.social.icons]]
-    website = "buymeacoffee"
-    url = "https://www.buymeacoffee.com/"
-  [[params.homepage.social.icons]]
-    website = "medium"
-    url = "https://medium.com/"
-  [[params.homepage.social.icons]]
-    website = "reddit"
-    url = "https://reddit.com/"
-  [[params.homepage.social.icons]]
-    website = "dribbble"
-    url = "https://dribbble.com/"
-  [[params.homepage.social.icons]]
-    website = "stackoverflow"
-    url = "https://stackoverflow.com/"
-  [[params.homepage.social.icons]]
-    website = "xda"
-    url = "https://forum.xda-developers.com/"
-  [[params.homepage.social.icons]]
-    website = "tiktok"
-    url = "https://tiktok.com"
-  [[params.homepage.social.icons]]
-    website = "googlescholar"
-    url = "https://scholar.google.com/"
-  [[params.homepage.social.icons]]
-    website = "mastodon"
-    url = "https://joinmastodon.org"
-  [[params.homepage.social.icons]]
-    website = "youtube"
-    url = "https://youtube.com"
-  [[params.homepage.social.icons]]
-    website = "instagram"
-    url = "https://instagram.com"
-  [[params.homepage.social.icons]]
-    website = "facebook"
-    url = "https://facebook.com"
-  [[params.homepage.social.icons]]
-    website = "behance"
-    url = "https://behance.net"
+    url = "https://github.com/emptymalei"
+
 
 [[menu.main]]
   name = "About"
