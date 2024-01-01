@@ -5,7 +5,7 @@ draft: false
 ---
 
 
-**All submitted content will be licensed** under [the **CC BY-SA** license](https://creativecommons.org/licenses/by-sa/4.0/). Under this license, everyone, including you, can access and use the content on this website freely. **Please don't submit anything if you don't agree with this license.**
+**All submitted content will be licensed** under [the CC BY-SA license](https://creativecommons.org/licenses/by-sa/4.0/). Under this license, everyone, including you, can access and use the content on this website freely. **Please don't submit anything if you don't agree with this license.**
 
 On how to use the open content, please refer to [the About page](/about/).
 
