@@ -1,9 +1,8 @@
 ---
 author: KausalFlow
 title: About
-date: 2021-07-15
+date: 2023-12-29
 description:
-keywords: ["about-us", "about-hugo", "contact"]
-type: about
+keywords: ["about-us", "contact"]
 ---
 
