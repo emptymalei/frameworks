@@ -1,0 +1,51 @@
+<form
+    name="{{ .Site.Params.frontBundle }}-submission"
+    method="POST"
+    action="/submitted"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    id="{{ .Site.Params.frontBundle }}-submission-form"
+    class="contact-form"
+    style="margin-bottom: 3em;"
+>
+    <p class="is-hidden">
+        <label id="color-palette-submission-form-bot-label"
+            >Don't fill this out if you're human: <input name="bot-field" aria-labelledby="color-palette-submission-form-bot-label"
+        /></label>
+    </p>
+
+    <div class="mb-6">
+      <label for="submitted_by" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Submitted by (Your Name to be Displayed)</label>
+      <input type="text" id="submitted_by" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
+    </div> 
+
+    <div class="mb-6">
+      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        Name of the tool</label>
+      <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
+    </div> 
+
+    <div class="mb-6">
+      <label for="summary" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        Summary</label>
+      <textarea rows="4" type="text" id="summary" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required></textarea>
+    </div> 
+
+    <div class="mb-6">
+      <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        Category</label>
+      <input type="text" id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
+    </div> 
+
+    <div class="mb-6">
+      <label for="tags" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        Tags, each tag is separated by comma <kbd>,</kbd></label>
+      <input type="text" id="tags" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
+    </div> 
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button type="submit" class="button is-link">Submit</button>
+      </div>
+    </div>
+</form>
