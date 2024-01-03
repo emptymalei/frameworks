@@ -14,7 +14,7 @@ DefaultContentLanguage = "en"
       introTitle = "Frameworks for data"
       introSubtitle = "Collection of frameworks for data analytics, data storage, modelling, and tracking."
       introPhoto = "/home/undraw_note_list_re_r4u9.svg"
-      logo = "/logo/logo.png"
+      logo = "/logo/logo.svg"
     
     [[languages.en.menu.main]]
         name = "Frameworks"
