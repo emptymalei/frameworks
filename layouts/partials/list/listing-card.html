@@ -1,8 +1,8 @@
-<div class="p-2 border border-sky-500">
+<div class="p-2 border border-sky-500 dark:prose-dark">
   <a href="{{ .Permalink }}">
     {{- $dir := .Page.Permalink -}}
     {{ if isset .Params "images" }}
-    <div class="relative mb-5">
+    <div class="relative mb-5 dark:prose-dark">
       {{ with (index (.Params.images) 0) }}
       <img src="{{ $dir }}{{ .path }}" alt="{{ .Params.title }}"
         class="rounded-lg shadow-sm w-full h-52 object-cover" />
