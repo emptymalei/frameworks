@@ -126,5 +126,29 @@
                 </a>
             </li>
         </ul>
+        {{ if .Site.Params.darkModeToggle }}
+        <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
+            <li>
+            <a href="" class="toggle-dark-mode flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="12" cy="12" r="3" />
+                <line x1="12" y1="5" x2="12" y2="5.01" />
+                <line x1="17" y1="7" x2="17" y2="7.01" />
+                <line x1="19" y1="12" x2="19" y2="12.01" />
+                <line x1="17" y1="17" x2="17" y2="17.01" />
+                <line x1="12" y1="19" x2="12" y2="19.01" />
+                <line x1="7" y1="17" x2="7" y2="17.01" />
+                <line x1="5" y1="12" x2="5" y2="12.01" />
+                <line x1="7" y1="7" x2="7" y2="7.01" />
+                </svg>
+            <span class="flex-1 ms-3 whitespace-nowrap">Dark Mode Switch</span>
+            </a>
+            </li>
+        </ul>
+    {{ end }}
     </div>
 </aside>
+
+{{- partial "footer/meta.html" . -}}
