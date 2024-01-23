@@ -188,3 +188,4 @@ DefaultContentLanguage = "en"
     category = "categories"
     tag = "tags"
 
+enableEmoji = true

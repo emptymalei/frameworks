@@ -5,11 +5,11 @@
     <div class="mt-6 border-t border-gray-100 dark:prose-dark">
         <dl class="divide-y divide-gray-100 dark:prose-dark">
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 dark:prose-dark">
-                <dt class="text-base font-medium leading-6 text-gray-900 dark:prose-dark">Name</dt>
+                <dt class="text-base font-medium leading-6 text-gray-900 dark:prose-dark">{{ ":placard: Name" | transform.Emojify }}</dt>
                 <dd class="mt-1 text-base leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:prose-dark">{{ .Title }}</dd>
             </div>
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 dark:prose-dark">
-                <dt class="text-base font-medium leading-6 text-gray-900 dark:prose-dark">Categories</dt>
+                <dt class="text-base font-medium leading-6 text-gray-900 dark:prose-dark">{{ ":card_index_dividers: Categories" | transform.Emojify }}</dt>
                 <dd class="mt-1 text-base leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:prose-dark">
                     {{ range .Params.categories }}
                         <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" class="text-purple-800 text-base font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-purple-400 border border-purple-400 no-underline">
@@ -19,7 +19,7 @@
                 </dd>
             </div>
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 dark:prose-dark">
-                <dt class="text-base font-medium leading-6 text-gray-900 dark:prose-dark">Tags</dt>
+                <dt class="text-base font-medium leading-6 text-gray-900 dark:prose-dark">{{ ":label: Tags" | transform.Emojify }}</dt>
                 <dd class="mt-1 text-base leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:prose-dark">
                     {{ range .Params.tags }}
                         <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="text-green-800 text-base font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400 no-underline">
@@ -30,17 +30,40 @@
             </div>
             
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 dark:prose-dark">
-                <dt class="text-base font-medium leading-6 text-gray-900 dark:prose-dark">Links</dt>
-                <dd class="mt-2 text-base text-gray-900 sm:col-span-2 sm:mt-0 dark:prose-dark">
-                {{ range .Params.links }}
-                    <a href="{{ .link }}" class="text-red-800 text-base font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-indigo-400 border border-red-400 no-underline">
-                        {{ .name }}
-                    </a>
-                {{ end }}
-                </dd>
+                <dt class="text-base font-medium leading-6 text-gray-900 dark:prose-dark">{{ ":link: Links" | transform.Emojify }}</dt>
+                <dd class="mt-1 text-base leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:prose-dark"></dd>
+                <div class="mt-2 text-base text-gray-900 sm:col-span-2 sm:mt-0 dark:prose-dark">
+                    <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
+                        {{ range .Params.links }}
+                        <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                            <span><a href="{{ .link }}" class="text-green-800 text-base font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-indigo-400 no-underline">
+                                {{ .name }}
+                            </a></span>
+                        {{ end }}
+                    </ul>
+                </div>
             </div>
+
+            {{ if .Params.tutorials }}
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 dark:prose-dark">
-                <dt class="text-base font-medium leading-6 text-gray-900 dark:prose-dark">Submitted By</dt>
+                <dt class="text-base font-medium leading-6 text-gray-900 dark:prose-dark">{{ ":mortar_board: Tutorials" | transform.Emojify }}</dt>
+                <dd class="mt-1 text-base leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:prose-dark"></dd>
+                <div class="mt-2 text-base text-gray-900 sm:col-span-3 sm:mt-0 dark:prose-dark">
+                    <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
+                        {{ range .Params.tutorials }}
+                        <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                            <span><a href="{{ .link }}" class="text-green-800 text-base font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-indigo-400 no-underline">
+                                {{ .name | transform.Emojify }}
+                            </a></span>
+                        </li>           
+                    {{ end }}
+                    </ul>
+                </div>
+            </div>
+            {{ end }}
+
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 dark:prose-dark">
+                <dt class="text-base font-medium leading-6 text-gray-900 dark:prose-dark">{{ ":ninja: Submitted By" | transform.Emojify }}</dt>
                 <dd class="mt-1 text-base leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:prose-dark">
                     {{ with .Params.submitted_by }}
                     <span itemprop="author">
