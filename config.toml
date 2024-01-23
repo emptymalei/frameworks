@@ -138,7 +138,7 @@ DefaultContentLanguage = "en"
   reactionsenabled = "1"
   emitmetadata = "1"
   inputposition = "top"
-  theme = "preferred_color_scheme"
+  theme = "transparent_dark"
 
   # Options for utterances, exclude hyphens
   # repo = ""

@@ -4,6 +4,7 @@
   <body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen">
     <main class="flex-1">
     {{- block "main" . }}{{- end }}
+    {{- partial "comments.html" . -}}
     </main>
     {{- partial "footer/meta.html" . -}}
   </body>
