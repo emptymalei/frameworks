@@ -19,7 +19,6 @@ links:
 tutorials:
   - name: ":classical_building:	Introduction to Airflow in Python @ DataCamp"
     link: "https://app.datacamp.com/learn/courses/introduction-to-airflow-in-python"
-author:    # the person who submitted this tool to KausalFlow
 submitted_by: LM
 draft: false
 ---

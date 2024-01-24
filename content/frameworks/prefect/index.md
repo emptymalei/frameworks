@@ -17,7 +17,9 @@ links:
     link: "https://www.prefect.io"
   - name: "PrefectHQ/prefect"
     link: "https://github.com/PrefectHQ/prefect"
-author:    # the person who submitted this tool to KausalFlow
+tutorials:
+  - name: ":tv: Introduction to Workflow Orchestration with Prefect- Kevin Kho | SciPy 2022 @ Youtube"
+    link: "https://www.youtube.com/watch?v=XL4wgLUp-VA"
 submitted_by: LM
 draft: false
 ---
