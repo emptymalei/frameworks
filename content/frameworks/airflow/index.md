@@ -12,7 +12,7 @@ images: # Create a folder called assets alongside this index.md file and place t
 categories:
   - workflow
 tags:
-  - "workflow"
+  - "orchestrator"
 links:
   - name: "apache/airflow"
     link: "https://github.com/apache/airflow"

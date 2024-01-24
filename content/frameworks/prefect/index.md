@@ -11,7 +11,8 @@ images: # Create a folder called assets alongside this index.md file and place t
 categories:
   - workflow
 tags:
-  - "workflow"
+  - "orchestrator"
+  - "cloud-native"
 links:
   - name: "prefect.io"
     link: "https://www.prefect.io"
@@ -23,3 +24,8 @@ tutorials:
 submitted_by: LM
 draft: false
 ---
+
+## Infra
+
+- local
+- cloud: https://docs.prefect.io/latest/concepts/work-pools/#work-pool-types
