@@ -1,6 +1,6 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: New Framework
+about: Suggest a new framework
 title: ''
 labels: ''
 assignees: ''
