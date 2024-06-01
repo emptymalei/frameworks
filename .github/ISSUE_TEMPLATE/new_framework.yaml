@@ -2,63 +2,58 @@ name: New Framework
 description: Suggest a new framework
 title: "[New]: "
 labels: ["add", "framework", "triage"]
-projects: ["emptymalei/projects/10"]
+projects: ["emptymalei/10"]
 assignees:
   - emptymalei
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
   - type: input
-    id: contact
+    id: submitted_by
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Submitted by
+      description: The user name who submitted this content to be Displayed on the web page
     validations:
-      required: false
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Name of the tool
+      description: Name of the tool to be proposed to add to the website
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+    validations:
+      required: true
   - type: textarea
-    id: what-happened
+    id: summary
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Summary
+      description: Summary of the tool
+      placeholder: 
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: categories
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-      default: 0
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
+      label: Categories
       multiple: true
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
+        - workflow
+        - ml
+        - experiment tracking
+        - data catalog
+  - type: input
+    id: tags
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      label: Tags
+      description: A list tags, each tag is separated by comma `,`
   - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+      label: CC BY SA 
+      description: By submitting this issue, you agree to follow the [CC BY-SA license](https://creativecommons.org/licenses/by-sa/4.0/). 
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: I agree to use CC BY-SA license for my content.
           required: true
